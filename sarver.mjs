@@ -11,18 +11,15 @@ app.get('/home', (req, res) => {
 app.get('/profile', (req, res) => {
     res.send('I am profile page!')
 })
-app.get('/weather', (req, res) => {
 
+app.get('/weather', (req, res) => {
     res.send({
         weather: 'sunny',
         temperature: '20',
-        city: 'London'
+        city: 'London',
     })
-
 })
 
-const port = process.env.PORT || 3000;
-
-app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
+app.listen(3000, () => {
+    console.log(`Example app listening on port ${3000}`)
 })
